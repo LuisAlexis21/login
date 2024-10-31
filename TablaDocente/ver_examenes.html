@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Exámenes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav-links">
+            <a href="/LoginForm/Perfil/perfil.html"> Perfil </a>
+            <a href="/LoginForm/Docente/index.html">Inicio</a>
+            <a href="/LoginForm/TablaDocente/ver_examenes.html"> Exámenes</a>
+            <a href="/LoginForm/index.html"> Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <h1>Exámenes Publicados</h1>
+    <table id="tabla-examenes">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Límite de Tiempo</th>
+                <th>Puntuación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los exámenes se cargarán aquí -->
+        </tbody>
+    </table>
+
+    <!-- Modal para editar examen -->
+<div id="modalEditar" style="display:none;">
+    <span onclick="cerrarModal('modalEditar')" style="cursor:pointer;">Cerrar</span>
+    <form id="formEditarExamen">
+        <label for="tituloExamen">Título del Examen:</label>
+        <input type="text" id="tituloExamen" required>
+        <label for="limiteTiempo">Límite de Tiempo:</label>
+        <input type="text" id="limiteTiempo" required>
+        <label for="puntuacion">Puntuación:</label>
+        <input type="number" id="puntuacion" required>
+        <div id="preguntasContainer"></div>
+        <button type="button" onclick="agregarPregunta()">Agregar Pregunta</button>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</div>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+    <script type="module" src="ver_examenes.js"></script>
+</body>
+
+</html>

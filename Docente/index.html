@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Docente</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-links">
+            <a href="/LoginForm/Perfil/perfil.html"> Perfil </a>
+            <a href="/LoginForm/Docente/index.html">Inicio</a>
+            <a href="/LoginForm/TablaDocente/ver_examenes.html"> Exámenes</a>
+            <a href="/LoginForm/index.html">Cerrar sesión</a>
+        </nav>
+        <button class="visit-btn" onclick="location.href='https://github.com/LuisAlexis21/web'"> Visitar GitHub </button>
+    </header>
+
+    <main>
+        <section id="welcome-section">
+            <div class="welcome-text">
+                <h2>Bienvenido a la página para creación de exámenes</h2>
+                <p>Utiliza esta herramienta para crear y administrar tus exámenes fácilmente.</p>
+                <button id="create-exam-button" onclick="location.href='/LoginForm/Examen/crear_examen.html'">Crear un Examen</button>
+            </div>
+            <div class="welcome-image">
+                <img src="https://s.smallpdf.com/static/cms/f/102628/600x520/529c9f51b5/question-generator-main-feature3.svg" alt="Imagen de bienvenida">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Creado por: Luis Alexis Nava Najera </p>
+    </footer>
+</body>
+</html>

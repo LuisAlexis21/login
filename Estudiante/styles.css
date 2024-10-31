@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+    font-family: 'Lilita One', sans-serif;
+}
+
+body {
+    background: url(tierra-desde-el-espaci.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.exam-container {
+    backdrop-filter: blur(8px);
+    width: 700px;
+    padding: 20px;
+    border: 5px solid #0084ff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #0084ff;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #0084ff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para el contenedor de examen */
+#examDetails {
+    backdrop-filter: blur(8px);
+    width: 700px;
+    padding: 20px;
+    border: 5px solid #ff00f7;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: none;
+    color: #333;
+}
+
+#examTitle {
+    font-size: 1.5em;
+    color: #ff00f7;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#questionsContainer p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+button[type="submit"] {
+    background-color: #0084ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover {
+    background-color: #005bb5;
+}
+#logoutButton {
+    background-color: #d9534f; /* Color de fondo rojo suave */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-family: 'Poppins', sans-serif; /* Fuente para armonizar con el resto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#logoutButton:hover {
+    background-color: #c9302c; /* Color más oscuro en hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+

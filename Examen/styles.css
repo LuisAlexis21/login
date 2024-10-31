@@ -1,0 +1,145 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    margin-top: 9rem;
+    text-align: center;
+    color: hsl(262, 100%, 67%);
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(to right, #00a5ff, #ff07c1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #ff07c1, #00a5ff);
+
+}
+
+#preguntas {
+    margin-top: 20px;
+}
+#examenForm{
+    margin-top: 2rem;
+}
+
+.pregunta {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.pregunta label {
+    font-weight: normal;
+}
+
+.pregunta input {
+    margin: 5px 0;
+}
+
+.pregunta button {
+    width: auto;
+    background-color: #d32f2f; /* Color rojo para eliminar */
+}
+
+.pregunta button:hover {
+    background-color: #b71c1c; /* Color rojo más oscuro al pasar el mouse */
+}
+
+.header {
+    position: fixed;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem; 
+    background-color: hsla(0, 1%, 21%, 0.902);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border-radius: 1000px;
+    z-index: 1000;
+    margin: 10px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem; /* Aumentar el espacio entre enlaces */
+}
+
+.nav-links a {
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    text-decoration: none; 
+    font-size: 100%;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(to right, #00a5ff, #ff07c1);
+    transition: width 0.3s;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+}

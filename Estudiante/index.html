@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exámenes del Estudiante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="exam-container">
+        <h1>Exámenes Asignados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Examen</th>
+                    <th>Fecha de Entrega</th>
+                    <th>Calificación</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="examenesTable">
+                <!-- Aquí se añadirán las filas de exámenes -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="examDetails" style="display:none;">
+        <h2 id="examTitle">Título del Examen</h2>
+        <form id="examForm">
+            <div id="questionsContainer"></div>
+            <button type="submit">Enviar Respuestas</button>
+        </form>
+    </div>
+
+    <button id="logoutButton">Cerrar sesión</button>
+
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

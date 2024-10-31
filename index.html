@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Botón de regresar -->
+        <button id="backButton" class="hidden" onclick="goBack()">← Regresar</button>
+
+        <!--Formulario de inicio de sesion-->
+        <form id="loginForm">
+            <h1 id="loginTitle" class="animated-title">Iniciar Sesión</h1>
+            <div class="role-selection">
+                <button type="button" class="role-btn" id="studentBtn" onclick="selectRole('estudiante')">Estudiante</button>
+                <button type="button" class="role-btn" id="teacherBtn" onclick="selectRole('docente')">Docente</button>
+            </div>
+            <div id="loginFields" class="hidden">
+                <input type="email" class="inputs" id="email" placeholder="Correo Electrónico" autocomplete="off">
+                <input type="password" class="inputs" id="password" placeholder="Contraseña" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember">
+                    <label for="remember" class="checkbox-label">Recordar</label>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="login-btn" id="loginButton">Iniciar Sesión</button>
+                <div class="register-text">
+                    ¿No tienes cuenta? <a href="#" onclick="toggleForms()">Regístrate</a>
+                </div>
+            </div>
+        </form>
+
+        <!--Formulario de registro-->
+        <form id="registerForm" class="hidden">
+            <h1>Regístrate</h1>
+            <input type="text" class="inputs" id="full_name" placeholder="Nombre" required autocomplete="off">
+            <input type="mail" class="inputs" id="emailR" placeholder="Correo Electrónico" autocomplete="off">
+            <input type="password" class="inputs" id="passwordR" placeholder="Contraseña" required>
+            <button type="submit" class="login-btn" id="registerButton">Registrar</button>
+            <div class="register-text">
+                ¿Ya tienes cuenta? <a href="#" onclick="toggleForms()">Iniciar Sesión</a>
+            </div>
+        </form>
+    </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script> 
+
+<!-- Our script must be loaded after firebase references -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+
+<script>
+    function selectRole(role) {
+        // Mostrar los campos de inicio de sesión
+        document.getElementById("loginFields").classList.remove("hidden");
+        
+        // Ocultar el botón contrario
+        if (role === 'estudiante') {
+            document.getElementById("teacherBtn").classList.add("hidden");
+        } else {
+            document.getElementById("studentBtn").classList.add("hidden");
+        }
+
+        // Mostrar el botón de regresar
+        document.getElementById("backButton").classList.remove("hidden");
+
+        // Detener la animación del título
+        document.getElementById("loginTitle").classList.add("static-title");
+    }
+
+    function goBack() {
+        // Ocultar los campos de inicio de sesión
+        document.getElementById("loginFields").classList.add("hidden");
+
+        // Mostrar ambos botones de rol nuevamente
+        document.getElementById("studentBtn").classList.remove("hidden");
+        document.getElementById("teacherBtn").classList.remove("hidden");
+
+        // Ocultar el botón de regresar
+        document.getElementById("backButton").classList.add("hidden");
+
+        // Reiniciar la animación del título
+        document.getElementById("loginTitle").classList.remove("static-title");
+    }
+
+    function toggleForms() {
+        var loginForm = document.getElementById("loginForm");
+        var registerForm = document.getElementById("registerForm");
+
+        if (loginForm.classList.contains("hidden")) {
+            loginForm.classList.remove("hidden");
+            registerForm.classList.add("hidden");
+        } else {
+            loginForm.classList.add("hidden");
+            registerForm.classList.remove("hidden");
+        }
+    }
+</script>
+</body>
+</html>
