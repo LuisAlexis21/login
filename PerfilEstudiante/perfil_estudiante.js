@@ -24,7 +24,7 @@ onAuthStateChanged(auth, (user) => {
         cargarPerfilUsuario(user.uid); // Pasa el UID del usuario autenticado
     } else {
         console.log("No hay ningún usuario autenticado");
-        window.location.href = "/LoginForm/index.html"; // Redirige si no hay usuario
+        window.location.href = "/login/index.html"; // Redirige si no hay usuario
     }
 });
 
@@ -55,7 +55,7 @@ async function cargarPerfilUsuario(userId) {
 window.cerrarSesion = function() {
     signOut(auth).then(() => {
         alert("Sesión cerrada");
-        window.location.href = "/LoginForm/index.html";
+        window.location.href = "/login/index.html";
     }).catch((error) => {
         console.error("Error al cerrar sesión:", error);
     });
