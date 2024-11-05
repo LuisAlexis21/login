@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-links">
+            <a href="/LoginForm/Docente/index.html">Inicio</a>
+        </nav>
+    </header>
+    <div class="profile-container">
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Imagen de perfil" class="profile-image">
+        <h2 id="nombreUsuario">Nombre del Usuario</h2>
+        <p id="correoUsuario">Correo electrónico: user@example.com</p>
+        <p id="rolUsuario">Rol: Estudiante</p>
+        <button id="logoutButton" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+    <script type="module" src="perfil.js"></script>
+</body>
+</html>

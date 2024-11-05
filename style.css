@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+    font-family: 'Lilita One', sans-serif;
+}
+
+body {
+    background: url(tierra-desde-el-espaci.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #0292f8;
+}
+
+.login-container {
+    backdrop-filter: blur(8px);
+    width: 400px;
+    padding: 20px;
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+    background: linear-gradient(to right, #0066ff, #000000);
+}
+
+.inputs {
+    width: 350px;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-label {
+    color: white;
+    margin-left: 5px;
+}
+
+.forgot-password {
+    color: white;
+    text-align: right;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0084ff;
+    color: #fff;
+    border: none;
+    border-radius: 100px; 
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.3s; 
+    background: linear-gradient(to right, #00a5ff, #b765ff);
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #b765ff, #00a5ff);
+}
+
+.register-text {
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: rgb(212, 160, 252);
+}
+
+a:active {
+    color: rgb(212, 160, 252);
+}
+
+.role-selection {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.role-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #0084ff;
+    border: none;
+    border-radius: 100px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+    background: linear-gradient(to right, #00a5ff, #b765ff);
+}
+
+.role-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #b765ff, #00a5ff);
+}
+.register-text{
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+.register-text:hover{
+    color: #ddd;
+}
+
+.hidden{
+    display: none;
+}
+/* Animación de movimiento para el título */
+.animated-title {
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #ffffff;
+    animation: titleMove 1.5s ease-in-out infinite alternate;
+}
+
+/* Definición de la animación */
+@keyframes titleMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(10px); }
+}
+
+/* Ocultar la animación después de seleccionar un rol */
+.static-title {
+    animation: none;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Examen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-links">
+            <a href="/LoginForm/Perfil/perfil.html">Perfil</a>
+            <a href="/LoginForm/Docente/index.html">Inicio</a>
+            <a href="/LoginForm/TablaDocente/ver_examenes.html">Exámenes</a>
+            <a href="/LoginForm/index.html">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <h1>Crear Examen</h1>
+    <form id="examenForm" onsubmit="crearExamen(event)">
+        <label>Título del examen:</label>
+        <input type="text" id="titulo" required>
+
+        <div id="preguntas">
+            <h3>Preguntas</h3>
+        </div>
+
+        <button type="button" onclick="agregarPregunta()">Agregar Pregunta</button><br>
+
+        <label>Fecha de publicación:</label>
+        <input type="date" id="fecha_publicacion" required>
+
+        <label>Hora de inicio:</label>
+        <input type="time" id="hora_inicio" required>
+
+        <label>Puntuación máxima del examen:</label>
+        <input type="number" id="puntuacion_maxima" min="1" required>
+
+        <button type="submit">Guardar</button>
+    </form>
+    
+    <!-- Modal de Confirmación -->
+    <div id="modalConfirmacion" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p>¡El examen se ha creado con éxito!</p>
+            <button onclick="cerrarModal()">Aceptar</button>
+        </div>
+    </div>
+
+    <script type="module" src="script_examen.js"></script>
+</body>
+</html>

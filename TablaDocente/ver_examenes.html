@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Exámenes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-links">
+            <a href="/LoginForm/Perfil/perfil.html">Perfil</a>
+            <a href="/LoginForm/Docente/index.html">Inicio</a>
+            <a href="/LoginForm/TablaDocente/ver_examenes.html">Exámenes</a>
+            <a href="/LoginForm/index.html">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <h1>Exámenes Publicados</h1>
+    <table id="tabla-examenes">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Fecha de Entrega</th>
+                <th>Hora de Inicio</th>
+                <th>Puntuación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los exámenes se cargarán aquí -->
+        </tbody>
+    </table>
+
+    <!-- Modal para editar examen -->
+    <div id="modalEditar" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modalEditar')">&times;</span>
+            <h2>Editar Examen</h2>
+            <form id="formEditarExamen">
+                <label for="tituloExamen">Título:</label>
+                <input type="text" id="tituloExamen" required>
+                
+                <label for="fechaEntrega">Fecha de Entrega:</label>
+                <input type="date" id="fechaEntrega" required>
+                
+                <label for="horaInicio">Hora de Inicio:</label>
+                <input type="time" id="horaInicio" required>
+                
+                <label for="puntuacion">Puntuación:</label>
+                <input type="text" id="puntuacion" required>
+
+                <div id="preguntasContainer"> <!-- Las preguntas se cargarán aquí --> </div>
+                <button type="button" onclick="agregarPregunta()">Agregar Pregunta</button>
+                
+                <button type="submit">Actualizar Examen</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="ver_examenes.js"></script>
+</body>
+</html>
